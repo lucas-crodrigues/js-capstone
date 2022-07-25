@@ -36,7 +36,7 @@ module.exports = {
         test: /\.(ogg|mp3|wav|mpe?g)$/i,
         include: SRC,
         loader: 'file-loader',
-        type: 'javascript/auto'
+        type: 'javascript/auto',
       },
     ],
   },
