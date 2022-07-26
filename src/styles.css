@@ -1,17 +1,17 @@
 :root {
-  /* ----==== FONT ====----*/
+  /* ----==== FONT ====---- */
   --font-family: sans-serif;
   --font-size: 1rem;
   --font-weight-400: 400;
 
-  /* ----==== SPACING ====----*/
+  /* ----==== SPACING ====---- */
   --padding-section-container: 10px 5vw;
   --padding-main-section: 10vh 5vw;
   --margin-container: 0 0;
   --gap-10px: 10px;
 
-  /* ----==== COLOR PALLET ====----*/
-  --primary-color: rgba(158, 50, 7, 0.95);
+  /* ----==== COLOR PALLET ====---- */
+  --primary-color: #ff5100f3;
   --secondary-color: #191919;
   --other-color-black: #000;
   --other-color-white: #fff;
@@ -55,7 +55,8 @@ button {
   width: 138px;
 }
 
-header, footer {
+header,
+footer {
   display: flex;
   justify-content: space-between;
   padding: var(--padding-section-container);
