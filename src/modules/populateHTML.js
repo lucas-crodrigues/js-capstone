@@ -72,7 +72,7 @@ const createCard = (card) => {
 }
 
 const renderCards = () => {
-  const cardInfo = getCardInfo();
+  const cardInfo = JSON.parse(localStorage.getItem('sessionCardsInfo'));
   console.log(cardInfo);
   cardInfo.forEach((card) => {
     console.log(card);
