@@ -6,15 +6,15 @@
 
   /* ----==== SPACING ====----*/
   --padding-section-container: 10px 5vw;
+  --padding-main-section: 10vh 5vw;
   --margin-container: 0 0;
   --gap-10px: 10px;
 
   /* ----==== COLOR PALLET ====----*/
-  --primary-color: rgba(107, 1, 1, 0.959);
+  --primary-color: rgba(158, 50, 7, 0.95);
   --secondary-color: #191919;
   --other-color-black: #000;
   --other-color-white: #fff;
-
 }
 
 * {
@@ -28,6 +28,12 @@ html {
   background-color: var(--secondary-color);
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
 li {
   list-style: none;
 }
@@ -35,23 +41,28 @@ li {
 button {
   cursor: pointer;
   width: 100%;
+  background-color: var(--primary-color);
+  border-style: none;
+  padding: 5px;
 }
 
 /* ----- GLOBAL ----- */
 
 .logo {
-  background-color: var(--primary-color);
-  height: 25px;
-  width: 25px;
+  background-image: url('./assets/magic_logo.png');
+  background-size: contain;
+  height: 71px;
+  width: 138px;
 }
 
-/* ----- HEADER ----- */
-
-header {
+header, footer {
   display: flex;
   justify-content: space-between;
   padding: var(--padding-section-container);
+  align-items: center;
 }
+
+/* ----- HEADER ----- */
 
 header ul {
   display: flex;
@@ -61,7 +72,9 @@ header ul {
 /* ----- MAIN ----- */
 
 main {
-  padding: var(--padding-section-container);
+  padding: var(--padding-main-section);
+  background-image: url('./assets/bg_magic.jpg');
+  height: 100%;
 }
 
 .cards {
@@ -95,10 +108,11 @@ main {
 .card-title {
   width: 100%;
 }
-/* ----- FOOTER ----- */
 
-footer {
-  display: flex;
-  padding: var(--padding-section-container);
-  justify-content: space-between;
+/* ----- MOBILE ----- */
+
+@media (max-width: 353px) {
+  .cards {
+    justify-content: center;
+  }
 }
