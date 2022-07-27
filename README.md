@@ -1,6 +1,7 @@
 # JS Capstone
 
-This is the Capstone project for the second module in the Microverse program.
+This is the Capstone project for the second module in the Microverse program. <br>
+The project was based on [Scryfall API](https://scryfall.com/docs/api).
 
 ## Built With
 
@@ -53,7 +54,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-[Microverse](https://github.com/microverseinc) team
+[Microverse](https://github.com/microverseinc) team. <br>
+[Scryfall](https://scryfall.com/).
 
 ## 📝 License
 
