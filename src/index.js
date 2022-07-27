@@ -1,7 +1,7 @@
 import './styles.css';
 import getCardInfo from './modules/cardsInfo.js';
 import renderCards from './modules/populateHTML.js';
-import { getLike } from './modules/invLikes.js'
+import { getLike } from './modules/invLikes.js';
 
 window.addEventListener('DOMContentLoaded', async () => {
   getCardInfo(renderCards);

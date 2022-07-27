@@ -14,7 +14,7 @@ export const postLike = async (id) => {
   } catch (error) {
     throw new Error('Can not post Like');
   }
-}; 
+};
 
 export const getLike = async () => {
   try {

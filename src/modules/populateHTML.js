@@ -1,5 +1,5 @@
 import createPopUp from './popUp.js';
-import { postLike } from "./invLikes";
+import { postLike } from './invLikes.js';
 
 const createCard = (card) => {
   const cardsContainter = document.querySelector('.cards');
@@ -48,7 +48,7 @@ const createCard = (card) => {
   cardLike.addEventListener('change', () => {
     postLike(card.id);
     cardLike.disabled = 'disabled';
-  })
+  });
 };
 
 const renderCards = () => {
