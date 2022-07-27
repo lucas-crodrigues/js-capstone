@@ -1,7 +1,7 @@
-import getCardNames from '../modules/sessionCards.js';
+import getCardNames from './sessionCards.js';
 
 const getCardInfo = async (renderCards) => {
-  let cardInfo = [];
+  const cardInfo = [];
   await getCardNames();
   const sessionCards = JSON.parse(localStorage.getItem('sessionCards'));
   sessionCards.forEach(async (card) => {
@@ -10,8 +10,8 @@ const getCardInfo = async (renderCards) => {
       cardInfo.push(dataArr);
       localStorage.setItem('sessionCardsInfo', JSON.stringify(cardInfo));
     });
-  })
+  });
   renderCards();
-}
+};
 
 export default getCardInfo;
