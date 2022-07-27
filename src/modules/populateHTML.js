@@ -1,4 +1,5 @@
 import createPopUp from './popUp.js';
+import { postLike } from './invLikes.js';
 
 const createCard = (card) => {
   const cardsContainter = document.querySelector('.cards');
@@ -32,6 +33,7 @@ const createCard = (card) => {
   cardInfo.append(cardName, cardLike);
 
   cardImage.style.backgroundImage = `url(${card.image_uris.large})`;
+  cardLike.id = `${card.id}`;
 
   cardComments.addEventListener('click', () => {
     const cardImg = card.image_uris.large;
@@ -41,6 +43,11 @@ const createCard = (card) => {
     const cardText = card.oracle_text;
     const cartArtist = card.artist;
     createPopUp(cardImg, cardName, cardCost, cardType, cardText, cartArtist);
+  });
+
+  cardLike.addEventListener('change', () => {
+    postLike(card.id);
+    cardLike.disabled = 'disabled';
   });
 };
 
