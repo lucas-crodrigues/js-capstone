@@ -1,4 +1,4 @@
-import main from './htmlConsts';
+import main from './htmlConsts.js';
 
 const createPopUp = (img, name, mana, type, text, artist) => {
   const popUpSection = document.createElement('section');
@@ -42,6 +42,6 @@ const createPopUp = (img, name, mana, type, text, artist) => {
   buttonClose.addEventListener('click', () => {
     popUpSection.remove();
   });
-}
+};
 
 export default createPopUp;

@@ -1,4 +1,4 @@
-import createPopUp from "./popUp";
+import createPopUp from './popUp.js';
 
 const createCard = (card) => {
   const cardsContainter = document.querySelector('.cards');
@@ -41,7 +41,7 @@ const createCard = (card) => {
     const cardText = card.oracle_text;
     const cartArtist = card.artist;
     createPopUp(cardImg, cardName, cardCost, cardType, cardText, cartArtist);
-  })
+  });
 };
 
 const renderCards = () => {
