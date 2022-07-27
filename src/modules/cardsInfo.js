@@ -1,16 +1,16 @@
-import getCardNames from './sessionCards.js';
 
-const getCardInfo = () => {
+
+const getCardInfo = async () => {
   let cardInfo = [];
   const sessionCards = JSON.parse(localStorage.getItem('sessionCards'));
-  sessionCards.forEach((card) => {
+  sessionCards.forEach(async (card) => {
     fetch(`https://api.scryfall.com/cards/named?fuzzy=${card}`).then(async (response) => {
       const dataArr = await response.json();
       cardInfo.push(dataArr);
+      localStorage.setItem('sessionCardsInfo', JSON.stringify(cardInfo));
     });
   })
   console.log(cardInfo);
-  localStorage.setItem('sessionCardsInfo', JSON.stringify(cardInfo));
   return cardInfo;
 }
 
