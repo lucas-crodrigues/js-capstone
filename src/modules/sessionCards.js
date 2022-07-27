@@ -1,3 +1,4 @@
+import { setLocalStorage } from "./localStorage.js";
 const url = 'https://api.scryfall.com/catalog/card-names';
 
 const getCardNames = async () => {
@@ -7,7 +8,7 @@ const getCardNames = async () => {
     const filterResult = resultArr.splice(Math.floor(Math.random() * (resultArr.length - 24)), 24);
     return filterResult;
   });
-  localStorage.setItem('sessionCards', JSON.stringify(cardList));
+  setLocalStorage('sessionCards', cardList);
 };
 
 export default getCardNames;
