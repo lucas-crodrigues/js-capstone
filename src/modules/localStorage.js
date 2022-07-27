@@ -1,7 +1,4 @@
-export const getLocalStorage = (localStorageArr) => {
-  return JSON.parse(localStorage.getItem(localStorageArr));
-}
+/* eslint-disable max-len */
+export const getLocalStorage = (localStorageArr) => JSON.parse(localStorage.getItem(localStorageArr));
 
-export const setLocalStorage = (localStorageArr, codeArr) => {
-  return localStorage.setItem(localStorageArr, JSON.stringify(codeArr));
-}
+export const setLocalStorage = (localStorageArr, codeArr) => localStorage.setItem(localStorageArr, JSON.stringify(codeArr));
