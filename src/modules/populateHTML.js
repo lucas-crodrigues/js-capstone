@@ -49,6 +49,7 @@ const createCard = async (card) => {
 
   cardLike.addEventListener('change', () => {
     postLike(card.name);
+    cardLikeNum.innerHTML = Number(cardLikeNum.innerHTML) + 1;
     cardLike.disabled = 'disabled';
   });
 };
