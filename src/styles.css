@@ -75,7 +75,7 @@ header ul {
 main {
   padding: var(--padding-main-section);
   background-image: url('./assets/bg_magic.jpg');
-  height: 100%;
+  height: min-content;
 }
 
 .cards {
@@ -97,6 +97,7 @@ main {
   background-color: var(--other-color-white);
   height: 204px;
   width: 146px;
+  background-size: cover;
 }
 
 .card-info {
