@@ -5,5 +5,4 @@ import createPopUp from './modules/popUp.js'
 
 window.addEventListener('DOMContentLoaded', async () => {
   getCardInfo(renderCards);
-  createPopUp();
 });

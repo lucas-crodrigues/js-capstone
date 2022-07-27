@@ -1,8 +1,7 @@
-import popUpSection from './htmlConsts';
-import cardimage from '../assets/card-large-ex.jpg';
+import main from './htmlConsts';
 
-const createPopUp = () => {
-  console.log('created')
+const createPopUp = (img, name, mana, type, text, artist) => {
+  const popUpSection = document.createElement('section');
   const cardPopUp = document.createElement('ARTICLE');
   const buttonClose = document.createElement('div');
   const cardImagePopUp = document.createElement('img');
@@ -14,10 +13,10 @@ const createPopUp = () => {
   const cardOracleText = document.createElement('p');
   const cardArtist = document.createElement('p');
 
-
+  popUpSection.classList.add('popUp');
+  popUpSection.id = 'popUpSection';
   cardPopUp.classList.add('card', 'card-popUp');
   cardImagePopUp.classList.add('card-image-popUp');
-  cardImagePopUp.src = cardimage;
   cardTitle.classList.add('card-title');
   cardInfoPopUp.classList.add('card-info', 'card-info-popUp');
   cardManaCost.classList.add('card-mana-cost');
@@ -26,15 +25,23 @@ const createPopUp = () => {
   cardArtist.classList.add('card-artist');
   buttonClose.classList.add('button-close');
 
-  cardTitle.textContent = 'Card 1';
-  cardManaCost.textContent = 'Card Mana Cost';
-  cardTypeLine.textContent = 'Card type';
-  cardOracleText.textContent = 'Card Text';
+  buttonClose.textContent = 'X';
+  cardImagePopUp.src = img;
+  cardTitle.textContent = name;
+  cardManaCost.textContent = mana;
+  cardTypeLine.textContent = type;
+  cardOracleText.textContent = text;
   buttonComment.textContent = 'Comment';
+  cardArtist.textContent = artist;
 
+  main.appendChild(popUpSection);
   popUpSection.append(cardPopUp, buttonClose);
   cardPopUp.append(cardImagePopUp, cardTitle, cardInfoPopUp, cardArtist, buttonComment);
   cardInfoPopUp.append(cardManaCost, cardTypeLine, cardOracleText);
+
+  buttonClose.addEventListener('click', () => {
+    popUpSection.remove();
+  });
 }
 
 export default createPopUp;

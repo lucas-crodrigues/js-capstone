@@ -1,3 +1,2 @@
-const popUpSection = document.getElementById('popUpSection');
-
-export default popUpSection;
+const main = document.getElementById('main');
+export default main;

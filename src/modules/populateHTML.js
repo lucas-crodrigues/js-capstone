@@ -1,3 +1,5 @@
+import createPopUp from "./popUp";
+
 const createCard = (card) => {
   const cardsContainter = document.querySelector('.cards');
 
@@ -30,6 +32,16 @@ const createCard = (card) => {
   cardInfo.append(cardName, cardLike);
 
   cardImage.style.backgroundImage = `url(${card.image_uris.large})`;
+
+  cardComments.addEventListener('click', () => {
+    const cardImg = card.image_uris.large;
+    const cardName = card.name;
+    const cardCost = card.mana_cost;
+    const cardType = card.type_line;
+    const cardText = card.oracle_text;
+    const cartArtist = card.artist;
+    createPopUp(cardImg, cardName, cardCost, cardType, cardText, cartArtist);
+  })
 };
 
 const renderCards = () => {
