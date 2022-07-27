@@ -1,4 +1,5 @@
-import { setLocalStorage } from "./localStorage.js";
+import { setLocalStorage } from './localStorage.js';
+
 const url = 'https://api.scryfall.com/catalog/card-names';
 
 const getCardNames = async () => {
