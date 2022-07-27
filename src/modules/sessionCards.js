@@ -1,6 +1,6 @@
 const url = 'https://api.scryfall.com/catalog/card-names';
 
-const getCardNames = () => {
+const getCardNames = async () => {
   fetch(url).then(async (response) => {
     const dataArr = await response.json();
     const resultArr = dataArr.data;
