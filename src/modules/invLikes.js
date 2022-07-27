@@ -28,7 +28,7 @@ export const getLike = async () => {
 
 export const displayLike = async (id) => {
   const likesArr = await getLike();
-  const likeIndex = likesArr.findIndex(i => i.item_id === id);
+  const likeIndex = likesArr.findIndex((i) => i.item_id === id);
   const likeNum = likesArr[likeIndex].likes;
   return likeNum;
 };
