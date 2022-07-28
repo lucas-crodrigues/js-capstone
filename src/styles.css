@@ -36,6 +36,12 @@ body {
 
 li {
   list-style: none;
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+}
+
+li:hover {
+  color: var(--primary-color);
 }
 
 button {
@@ -43,7 +49,14 @@ button {
   width: 100%;
   background-color: var(--primary-color);
   border-style: none;
+  border: 1px solid var(--primary-color);
   padding: 5px;
+  transition: all 0.5s ease-out;
+}
+
+button:hover {
+  background-color: var(--other-color-white);
+  color: var(--primary-color);
 }
 
 .hide {
@@ -104,13 +117,22 @@ main {
   height: 204px;
   width: 146px;
   background-size: cover;
+  border-radius: 9px;
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+}
+
+.card-image:hover {
+  transform: scale(1.07);
 }
 
 .card-info {
   display: flex;
   gap: var(--gap-10px);
   justify-content: space-between;
+  align-items: center;
   width: 100%;
+  min-height: 40px;
 }
 
 .card-title {
