@@ -34,6 +34,16 @@ body {
   height: 100%;
 }
 
+a {
+  text-decoration: none;
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+}
+
+a:hover {
+  color: var(--primary-color);
+}
+
 li {
   list-style: none;
 }
@@ -43,7 +53,14 @@ button {
   width: 100%;
   background-color: var(--primary-color);
   border-style: none;
+  border: 1px solid var(--primary-color);
   padding: 5px;
+  transition: all 0.5s ease-out;
+}
+
+button:hover {
+  background-color: var(--other-color-white);
+  color: var(--primary-color);
 }
 
 .hide {
@@ -105,20 +122,48 @@ main {
 
 .card-image {
   background-color: var(--other-color-white);
-  height: 204px;
-  width: 146px;
+  height: 246px;
+  width: 177px;
   background-size: cover;
+  border-radius: 9px;
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+}
+
+.card-image:hover {
+  transform: scale(1.07);
 }
 
 .card-info {
   display: flex;
-  gap: var(--gap-10px);
   justify-content: space-between;
+  align-items: center;
   width: 100%;
+  min-height: 40px;
 }
 
 .card-title {
   width: 100%;
+}
+
+input[type='checkbox'] {
+  cursor: pointer;
+  appearance: none;
+  background-color: #bbb;
+  width: 35px;
+  height: 25px;
+  clip-path: path("M12 4.419c-2.826-5.695-11.999-4.064-11.999 3.27 0 7.27 9.903 10.938 11.999 15.311 2.096-4.373 12-8.041 12-15.311 0-7.327-9.17-8.972-12-3.27z");
+  transition: all 250ms ease-in-out;
+  transform: scale(0.68);
+}
+
+input[type='checkbox']:hover {
+  background-color: #ffb9b9;
+  transform: scale(0.8);
+}
+
+input[type='checkbox']:checked {
+  background-color: #f00;
 }
 
 /* ----- POPUP ----- */
@@ -189,7 +234,7 @@ main {
 
 /* ----- MOBILE ----- */
 
-@media (max-width: 353px) {
+@media (max-width: 420px) {
   .cards {
     justify-content: center;
   }
