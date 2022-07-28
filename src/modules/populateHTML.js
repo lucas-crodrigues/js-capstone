@@ -1,8 +1,11 @@
 import createPopUp from './popUp.js';
 import { postLike, displayLike } from './invLikes.js';
 
+let itemNum = 0;
+
 const createCard = async (card) => {
   const cardsContainter = document.querySelector('.cards');
+  const counter = document.querySelector('.counter');
 
   const cardArticle = document.createElement('article');
   const cardImage = document.createElement('div');
@@ -11,7 +14,6 @@ const createCard = async (card) => {
   const cardLike = document.createElement('input');
   const cardLikeNum = document.createElement('p');
   const cardComments = document.createElement('button');
-  const cardReservations = document.createElement('button');
 
   cardArticle.classList.add('card');
   cardImage.classList.add('card-image');
@@ -19,19 +21,16 @@ const createCard = async (card) => {
   cardName.classList.add('card-title');
   cardLike.classList.add('button-like');
   cardComments.classList.add('button-comments');
-  cardReservations.classList.add('button-reservations');
 
   cardLike.type = 'checkbox';
   cardComments.type = 'button';
-  cardReservations.type = 'button';
 
   cardName.innerHTML = card.name;
   cardLikeNum.innerHTML = await displayLike(card.name);
   cardComments.innerHTML = 'Comments';
-  cardReservations.innerHTML = 'Reservations';
 
   cardsContainter.appendChild(cardArticle);
-  cardArticle.append(cardImage, cardInfo, cardComments, cardReservations);
+  cardArticle.append(cardImage, cardInfo, cardComments);
   cardInfo.append(cardName, cardLike, cardLikeNum);
 
   cardImage.style.backgroundImage = `url(${card.image_uris.large})`;
@@ -52,6 +51,11 @@ const createCard = async (card) => {
     cardLikeNum.innerHTML = Number(cardLikeNum.innerHTML) + 1;
     cardLike.disabled = 'disabled';
   });
+
+  // item counter
+
+  itemNum += 1;
+  counter.innerHTML = `Cards (${itemNum})`;
 };
 
 const renderCards = () => {
