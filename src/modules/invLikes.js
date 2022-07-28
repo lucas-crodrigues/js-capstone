@@ -25,3 +25,10 @@ export const getLike = async () => {
     throw new Error('unable to get a Data');
   }
 };
+
+export const displayLike = async (id) => {
+  const likesArr = await getLike();
+  const likeIndex = likesArr.findIndex((i) => i.item_id === id);
+  const likeNum = likesArr[likeIndex].likes;
+  return likeNum;
+};

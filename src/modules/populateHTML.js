@@ -1,7 +1,7 @@
 import createPopUp from './popUp.js';
-import { postLike } from './invLikes.js';
+import { postLike, displayLike } from './invLikes.js';
 
-const createCard = (card) => {
+const createCard = async (card) => {
   const cardsContainter = document.querySelector('.cards');
 
   const cardArticle = document.createElement('article');
@@ -9,6 +9,7 @@ const createCard = (card) => {
   const cardInfo = document.createElement('div');
   const cardName = document.createElement('span');
   const cardLike = document.createElement('input');
+  const cardLikeNum = document.createElement('p');
   const cardComments = document.createElement('button');
   const cardReservations = document.createElement('button');
 
@@ -25,12 +26,13 @@ const createCard = (card) => {
   cardReservations.type = 'button';
 
   cardName.innerHTML = card.name;
+  cardLikeNum.innerHTML = await displayLike(card.name);
   cardComments.innerHTML = 'Comments';
   cardReservations.innerHTML = 'Reservations';
 
   cardsContainter.appendChild(cardArticle);
   cardArticle.append(cardImage, cardInfo, cardComments, cardReservations);
-  cardInfo.append(cardName, cardLike);
+  cardInfo.append(cardName, cardLike, cardLikeNum);
 
   cardImage.style.backgroundImage = `url(${card.image_uris.large})`;
   cardLike.id = `${card.id}`;
@@ -46,7 +48,8 @@ const createCard = (card) => {
   });
 
   cardLike.addEventListener('change', () => {
-    postLike(card.id);
+    postLike(card.name);
+    cardLikeNum.innerHTML = Number(cardLikeNum.innerHTML) + 1;
     cardLike.disabled = 'disabled';
   });
 };
