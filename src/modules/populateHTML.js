@@ -8,6 +8,7 @@ const createCard = async (card) => {
   const counter = document.querySelector('.counter');
 
   const cardArticle = document.createElement('article');
+  const cardImageA = document.createElement('a');
   const cardImage = document.createElement('div');
   const cardInfo = document.createElement('div');
   const cardName = document.createElement('span');
@@ -25,13 +26,17 @@ const createCard = async (card) => {
   cardLike.type = 'checkbox';
   cardComments.type = 'button';
 
+  cardImageA.href = card.image_uris.large;
+  cardImageA.target = '_blank';
+
   cardName.innerHTML = card.name;
   cardLikeNum.innerHTML = await displayLike(card.name);
   cardComments.innerHTML = 'Comments';
 
   cardsContainter.appendChild(cardArticle);
-  cardArticle.append(cardImage, cardInfo, cardComments);
+  cardArticle.append(cardImageA, cardInfo, cardComments);
   cardInfo.append(cardName, cardLike, cardLikeNum);
+  cardImageA.appendChild(cardImage);
 
   cardImage.style.backgroundImage = `url(${card.image_uris.large})`;
   cardLike.id = `${card.id}`;
