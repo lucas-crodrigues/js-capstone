@@ -14,7 +14,7 @@ The project was based on [Scryfall API](https://scryfall.com/docs/api).
 
 ## Live Demo
 
- [N/A]()
+ [JS Capstone](https://lucas-crodrigues.github.io/js-capstone/dist)
 
  ## Loom video
 
