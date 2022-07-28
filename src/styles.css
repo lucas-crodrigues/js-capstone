@@ -51,6 +51,10 @@ button {
   visibility: hidden;
 }
 
+.overFlowHidden {
+  overflow-y: hidden;
+}
+
 /* ----- GLOBAL ----- */
 
 .logo {
@@ -129,6 +133,7 @@ main {
   background-color: #191919ea;
   width: 100%;
   height: 100%;
+  overflow-y: scroll;
 }
 
 .button-close {
@@ -142,8 +147,44 @@ main {
   height: 56vw;
 }
 
+.card-popUp .card-title {
+  display: flex;
+  justify-content: center;
+}
+
 .card-info-popUp {
   flex-wrap: wrap;
+}
+
+.commentsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-10px);
+  padding: 10px 0;
+}
+
+.commentsTitleContainer {
+  display: flex;
+  gap: var(--gap-10px);
+  align-self: center;
+}
+
+.commentContainer {
+  display: flex;
+  gap: var(--gap-10px);
+}
+
+.addCommentForm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-10px);
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.addCommentForm input {
+  padding: 5px;
+  width: 100%;
 }
 
 /* ----- MOBILE ----- */
