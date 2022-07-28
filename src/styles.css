@@ -34,14 +34,18 @@ body {
   height: 100%;
 }
 
-li {
-  list-style: none;
+a {
+  text-decoration: none;
   transition: all 0.5s ease-out;
   cursor: pointer;
 }
 
-li:hover {
+a:hover {
   color: var(--primary-color);
+}
+
+li {
+  list-style: none;
 }
 
 button {
