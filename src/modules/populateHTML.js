@@ -54,7 +54,7 @@ const createCard = async (card) => {
 
   // item counter
 
-  itemNum ++;
+  itemNum += 1;
   counter.innerHTML = `Cards (${itemNum})`;
 };
 
