@@ -27,6 +27,7 @@ const createCard = async (card) => {
   cardComments.type = 'button';
 
   cardImageA.href = card.image_uris.large;
+  cardImageA.rel = 'noopener noreferrer';
   cardImageA.target = '_blank';
 
   cardName.innerHTML = card.name;
