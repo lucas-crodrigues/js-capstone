@@ -193,7 +193,7 @@ input[type='checkbox']:checked {
 
 /* ----- MOBILE ----- */
 
-@media (max-width: 353px) {
+@media (max-width: 420px) {
   .cards {
     justify-content: center;
   }
