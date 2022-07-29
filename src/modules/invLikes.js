@@ -1,4 +1,4 @@
-const appID = 'JMmUrfz1eG6NBjtIPHdJ';
+import { appID } from './htmlConsts.js';
 
 export const postLike = async (id) => {
   try {
