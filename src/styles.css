@@ -29,7 +29,7 @@
 }
 
 :root ::-webkit-scrollbar {
-  width: 13px;
+  width: 6px;
 }
 
 /* Track */
@@ -40,7 +40,7 @@
 /* Handle */
 :root ::-webkit-scrollbar-thumb {
   background: var(--primary-color);
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
 /* Handle on hover */
