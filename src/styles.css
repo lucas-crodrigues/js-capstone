@@ -93,6 +93,12 @@ button:hover {
   overflow-y: hidden;
 }
 
+input {
+  background-color: var(--secondary-color);
+  border: none;
+  height: 40px;
+}
+
 /* ----- GLOBAL ----- */
 
 .logo {
@@ -195,7 +201,7 @@ input[type='checkbox']:checked {
   position: fixed;
   top: 0;
   left: 0;
-  padding: 5vh 10vw;
+  padding: 1vh 10vw;
   background-color: #191919ea;
   width: 100%;
   height: 100%;
@@ -204,7 +210,7 @@ input[type='checkbox']:checked {
 
 .button-close {
   position: absolute;
-  right: 5vw;
+  right: 2vw;
   top: 5vw;
   color: red;
   font-size: 5vw;
@@ -215,12 +221,16 @@ input[type='checkbox']:checked {
   display: flex;
   flex-direction: row;
   gap: 20px;
+  background-color: #0f0f0fcc;
+  padding: 20px;
+  border-radius: 27px;
 }
 
 .card-image-popUp {
   width: 40vw;
   height: 56vw;
-  border-radius: 22px;
+  max-height: 936px;
+  border-radius: 27px;
 }
 
 .cardDescriptionContainer {
@@ -245,6 +255,10 @@ input[type='checkbox']:checked {
   width: 100%;
   text-align: justify;
   text-justify: inter-word;
+}
+
+.card-artist {
+  text-align: center;
 }
 
 .commentsContainer {
@@ -287,7 +301,7 @@ input[type='checkbox']:checked {
   }
 }
 
-@media (max-width: 425px) {
+@media (max-width: 450px) {
   .card-popUp {
     flex-direction: column;
     align-items: center;
