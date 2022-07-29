@@ -5,7 +5,7 @@ import getCardNames from './modules/sessionCards.js';
 
 let numCard = 0;
 
-window.addEventListener('DOMContentLoaded', async () => {
+window.addEventListener('DOMContentLoaded', () => {
   numCard = 0
   getCardNames(numCard).then(() => {
     getCardInfo().then(() => {
