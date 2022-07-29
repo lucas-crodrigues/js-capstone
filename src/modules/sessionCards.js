@@ -10,6 +10,7 @@ const getCardNames = async (num) => {
     return filterResult;
   });
   setLocalStorage('sessionCards', cardList);
+  return cardList;
 };
 
 export default getCardNames;
