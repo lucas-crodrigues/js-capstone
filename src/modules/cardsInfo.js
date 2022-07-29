@@ -1,18 +1,18 @@
 import { getLocalStorage, setLocalStorage } from './localStorage.js';
+import renderCards from './populateHTML.js';
 import getCardNames from './sessionCards.js';
 
-const getCardInfo = async (renderCards, num) => {
+const getCardInfo = async () => {
   const cardInfo = [];
-  await getCardNames(num);
-  const sessionCards = getLocalStorage('sessionCards');
-  sessionCards.forEach(async (card) => {
+  const sessionCards = await getLocalStorage('sessionCards');
+  await Promise.all(sessionCards.map(async (card) => {
     await fetch(`https://api.scryfall.com/cards/named?fuzzy=${card}`).then(async (response) => {
       const dataArr = await response.json();
       cardInfo.push(dataArr);
       setLocalStorage('sessionCardsInfo', cardInfo);
     });
-  });
-  renderCards();
+  }));
+  return cardInfo;
 };
 
 export default getCardInfo;
