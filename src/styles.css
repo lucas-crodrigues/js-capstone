@@ -22,6 +22,27 @@
   margin: 0;
   padding: 0;
   color: white;
+  scroll-behavior: smooth;
+}
+
+:root ::-webkit-scrollbar {
+  width: 13px;
+}
+
+/* Track */
+:root ::-webkit-scrollbar-track {
+  background: var(--secundary-color);
+}
+
+/* Handle */
+:root ::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 html {
@@ -199,6 +220,7 @@ input[type='checkbox']:checked {
 .card-image-popUp {
   width: 40vw;
   height: 56vw;
+  border-radius: 22px;
 }
 
 .cardDescriptionContainer {
