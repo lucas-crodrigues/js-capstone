@@ -1,2 +1,2 @@
-const main = document.getElementById('main');
-export default main;
+export const main = document.getElementById('main');
+export const appID = 'JMmUrfz1eG6NBjtIPHdJ';

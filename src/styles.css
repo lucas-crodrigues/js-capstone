@@ -25,6 +25,27 @@
   margin: 0;
   padding: 0;
   color: white;
+  scroll-behavior: smooth;
+}
+
+:root ::-webkit-scrollbar {
+  width: 13px;
+}
+
+/* Track */
+:root ::-webkit-scrollbar-track {
+  background: var(--secundary-color);
+}
+
+/* Handle */
+:root ::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 html {
@@ -71,6 +92,10 @@ button:hover {
 .hide {
   display: none;
   visibility: hidden;
+}
+
+.overFlowHidden {
+  overflow-y: hidden;
 }
 
 /* ----- GLOBAL ----- */
@@ -188,25 +213,88 @@ input[type='checkbox']:checked {
   position: fixed;
   top: 0;
   left: 0;
-  padding: 5vh 25vw;
+  padding: 5vh 10vw;
   background-color: #191919ea;
   width: 100%;
   height: 100%;
+  overflow-y: scroll;
 }
 
 .button-close {
+  position: absolute;
+  right: 5vw;
+  top: 5vw;
   color: red;
   font-size: 5vw;
   cursor: pointer;
 }
 
+.card-popUp {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
 .card-image-popUp {
   width: 40vw;
   height: 56vw;
+  border-radius: 22px;
+}
+
+.cardDescriptionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-10px);
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.card-popUp .card-title {
+  display: flex;
+  justify-content: center;
 }
 
 .card-info-popUp {
   flex-wrap: wrap;
+  width: 35vw;
+}
+
+.card-oracle-text {
+  width: 100%;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.commentsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-10px);
+  padding: 10px 0;
+}
+
+.commentsTitleContainer {
+  display: flex;
+  gap: var(--gap-10px);
+  align-self: center;
+  align-items: center;
+}
+
+.commentContainer {
+  display: flex;
+  gap: var(--gap-10px);
+}
+
+.addCommentForm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-10px);
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.addCommentForm input {
+  padding: 5px;
+  width: 100%;
 }
 
 /* ----- MOBILE ----- */
@@ -214,5 +302,17 @@ input[type='checkbox']:checked {
 @media (max-width: 514px) {
   .cards {
     justify-content: center;
+  }
+}
+
+@media (max-width: 425px) {
+  .card-popUp {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-info-popUp {
+    width: 80vw;
   }
 }
