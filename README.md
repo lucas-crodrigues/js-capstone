@@ -5,20 +5,25 @@ The project was based on [Scryfall API](https://scryfall.com/docs/api).
 
 ## Built With
 
-- HTML/CSS 
-- Javascript 
+- HTML/CSS
+- Javascript
 - Visual Studio Code
 - Node.js
 - Webpack
 - Jest
 
+## API's
+- [Scryfall API](https://scryfall.com/docs/api) for the content
+- [Involvement API](https://www.notion.so/microverse/Involvement-API-869e60b5ad104603aa6db59e08150270) for likes and comments
+
 ## Live Demo
 
  [JS Capstone](https://lucas-crodrigues.github.io/js-capstone/dist)
 
+### Quick View
  ## Loom video
 
- N/A
+ [N/A]()
 
 ## Getting Started
 
@@ -28,6 +33,9 @@ To get a local copy up and running, run these command lines on your console:<br>
   1- `cd js-capstone` <br>
   2-  `npm install` <br>
   3-  `npm start` <br>
+
+After that is done, if you want to check out the testing features, run this command line :<br>
+  1- `npm test` <br>
 
 ## Authors
 
