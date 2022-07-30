@@ -117,9 +117,11 @@ const createPopUp = async (img, name, mana, type, text, artist) => {
     commentsCounter.textContent = '0';
   }
 
-  addCommentForm.addEventListener('submit', (e) => {
+  addCommentForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-    postComment(name, addCommentNameInput.value, addCommentTextInput.value);
+    await postComment(name, addCommentNameInput.value, addCommentTextInput.value);
+    popUpSection.remove();
+    createPopUp(img, name, mana, type, text, artist);
   });
 };
 
