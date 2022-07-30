@@ -8,4 +8,4 @@ describe('Cards counter test', () => {
       expect(cardsCounter).toBe(3);
     });
   });
-})
+});
