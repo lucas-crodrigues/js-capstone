@@ -1,6 +1,4 @@
 import { getLocalStorage, setLocalStorage } from './localStorage.js';
-import renderCards from './populateHTML.js';
-import getCardNames from './sessionCards.js';
 
 const getCardInfo = async () => {
   const cardInfo = [];

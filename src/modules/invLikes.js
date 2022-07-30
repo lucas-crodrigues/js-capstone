@@ -31,7 +31,7 @@ export const displayLike = async (id) => {
   const likeIndex = likesArr.findIndex((i) => i.item_id === id);
   let likeNum = 0;
   if (likeIndex === -1) {
-    likeNum = 0; 
+    likeNum = 0;
   } else {
     likeNum = likesArr[likeIndex].likes;
   }

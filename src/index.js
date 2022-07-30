@@ -6,12 +6,12 @@ import getCardNames from './modules/sessionCards.js';
 let numCard = 0;
 
 window.addEventListener('DOMContentLoaded', () => {
-  numCard = 0
+  numCard = 0;
   getCardNames(numCard).then(() => {
     getCardInfo().then(() => {
       renderCards();
-    })
-  })
+    });
+  });
 });
 
 document.querySelector('.more').addEventListener('click', () => {
@@ -19,6 +19,6 @@ document.querySelector('.more').addEventListener('click', () => {
   getCardNames(numCard).then(() => {
     getCardInfo().then(() => {
       renderCards();
-    })
-  })
-})
+    });
+  });
+});
