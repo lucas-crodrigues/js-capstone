@@ -223,7 +223,6 @@ input[type='checkbox']:checked {
   background-color: #191919ea;
   width: 100%;
   height: 100%;
-  overflow-y: scroll;
 }
 
 .button-close {
