@@ -3,7 +3,7 @@ import { postLike, displayLike } from './invLikes.js';
 
 let itemNum = 0;
 
-const createCard = async (card) => {
+export const createCard = async (card) => {
   const cardsContainter = document.querySelector('.cards');
   const counter = document.querySelector('.counter');
 
@@ -31,7 +31,7 @@ const createCard = async (card) => {
   cardImageA.target = '_blank';
 
   cardName.innerHTML = card.name;
-  cardLikeNum.innerHTML = await displayLike(card.name);
+  // cardLikeNum.innerHTML = await displayLike(card.name);
   cardComments.innerHTML = 'Comments';
 
   cardsContainter.appendChild(cardArticle);
