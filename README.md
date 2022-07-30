@@ -1,8 +1,9 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
-# JS Capstone
+# Magic the gathering card's collection
 
 This is the Capstone project for the second module in the Microverse program. <br>
-The project was based on [Scryfall API](https://scryfall.com/docs/api).
+It is a website featuring the full collection o Magic the gathering cards, with functionalities to like and comment on each card. <br>
+The project was based on [Magic the gathering](https://magic.wizards.com/en) using the [Scryfall API](https://scryfall.com/docs/api).
 
 ## Built With
 ![](https://img.shields.io/badge/-HTML-orange) ![](https://img.shields.io/badge/-CSS-blue) ![](https://img.shields.io/badge/-JavaScript-yellow) ![](https://img.shields.io/badge/-webpack-9cf)
@@ -26,7 +27,7 @@ The project was based on [Scryfall API](https://scryfall.com/docs/api).
 ![capstoneScreenShot2](https://user-images.githubusercontent.com/47539402/181867602-ba49a7ad-066f-4ab7-8c97-86a0a25eb3bd.png)
 
 
- ## Video
+ ## Video Preview
 
  [Capstone Module 2](https://drive.google.com/file/d/1VlJSaq5-X9_CmfOykEB-Y_6xw41a4OwK/view?usp=sharing)
 
@@ -68,6 +69,7 @@ Give a ⭐️ if you like this project!
 ## Acknowledgments
 
 [Microverse](https://github.com/microverseinc) team. <br>
+[Magic the gathering](https://magic.wizards.com/en). <br>
 [Scryfall](https://scryfall.com/).
 
 ## 📝 License
