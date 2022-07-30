@@ -31,7 +31,7 @@ export const createCard = async (card) => {
   cardImageA.target = '_blank';
 
   cardName.innerHTML = card.name;
-  // cardLikeNum.innerHTML = await displayLike(card.name);
+  cardLikeNum.innerHTML = await displayLike(card.name);
   cardComments.innerHTML = 'Comments';
 
   cardsContainter.appendChild(cardArticle);
