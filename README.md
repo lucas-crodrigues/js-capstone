@@ -26,9 +26,9 @@ The project was based on [Scryfall API](https://scryfall.com/docs/api).
 ![capstoneScreenShot2](https://user-images.githubusercontent.com/47539402/181867602-ba49a7ad-066f-4ab7-8c97-86a0a25eb3bd.png)
 
 
- ## Loom video
+ ## Video
 
- [N/A]()
+ [Capstone Module 2](https://drive.google.com/file/d/1VlJSaq5-X9_CmfOykEB-Y_6xw41a4OwK/view?usp=sharing)
 
 ## Getting Started
 
