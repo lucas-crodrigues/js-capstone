@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&family=Patrick+Hand&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Share+Tech+Mono&display=swap');
+
 :root {
   /* ----==== FONT ====---- */
-  --font-family: sans-serif;
+  --font-family: 'Cinzel', serif;
   --font-size: 1rem;
   --font-weight-400: 400;
 
@@ -9,6 +11,7 @@
   --padding-main-section: 10vh 5vw;
   --margin-container: 0 0;
   --gap-10px: 10px;
+  --gap-5vh: 5vh;
 
   /* ----==== COLOR PALLET ====---- */
   --primary-color: #ff5100f3;
@@ -22,10 +25,32 @@
   margin: 0;
   padding: 0;
   color: white;
+  scroll-behavior: smooth;
+}
+
+:root ::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* Track */
+:root ::-webkit-scrollbar-track {
+  background: var(--secundary-color);
+}
+
+/* Handle */
+:root ::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 3px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
 
 html {
   background-color: var(--secondary-color);
+  font-family: var(--font-family);
 }
 
 body {
@@ -49,6 +74,7 @@ li {
 }
 
 button {
+  font-family: var(--font-family);
   cursor: pointer;
   width: 100%;
   background-color: var(--primary-color);
@@ -66,6 +92,16 @@ button:hover {
 .hide {
   display: none;
   visibility: hidden;
+}
+
+.overFlowHidden {
+  overflow-y: hidden;
+}
+
+input {
+  background-color: var(--secondary-color);
+  border: none;
+  height: 40px;
 }
 
 /* ----- GLOBAL ----- */
@@ -99,13 +135,16 @@ main {
   padding: var(--padding-main-section);
   background-image: url('./assets/bg_magic.jpg');
   height: min-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .cards {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-wrap: wrap;
-  gap: var(--gap-10px);
+  gap: var(--gap-5vh);
 }
 
 .card {
@@ -114,6 +153,9 @@ main {
   align-items: center;
   gap: var(--gap-10px);
   width: min-content;
+  background-color: #212121;
+  padding: 10px;
+  border-radius: 7px;
 }
 
 .card-image {
@@ -140,6 +182,7 @@ main {
 
 .card-title {
   width: 100%;
+  font-size: 14px;
 }
 
 input[type='checkbox'] {
@@ -162,6 +205,12 @@ input[type='checkbox']:checked {
   background-color: #f00;
 }
 
+.more {
+  margin: auto;
+  margin-top: 90px;
+  font-size: 22px;
+}
+
 /* ----- POPUP ----- */
 
 .popUp {
@@ -170,31 +219,113 @@ input[type='checkbox']:checked {
   position: fixed;
   top: 0;
   left: 0;
-  padding: 5vh 25vw;
+  padding: 1vh 10vw;
   background-color: #191919ea;
   width: 100%;
   height: 100%;
 }
 
 .button-close {
+  position: absolute;
+  right: 2vw;
+  top: 5vw;
   color: red;
   font-size: 5vw;
   cursor: pointer;
 }
 
+.card-popUp {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  background-color: #0f0f0fcc;
+  padding: 20px;
+  border-radius: 27px;
+}
+
 .card-image-popUp {
   width: 40vw;
   height: 56vw;
+  max-height: 936px;
+  border-radius: 27px;
+}
+
+.cardDescriptionContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-10px);
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.card-popUp .card-title {
+  display: flex;
+  justify-content: center;
 }
 
 .card-info-popUp {
   flex-wrap: wrap;
+  width: 35vw;
+}
+
+.card-oracle-text {
+  width: 100%;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+.card-artist {
+  text-align: center;
+}
+
+.commentsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-10px);
+  padding: 10px 0;
+}
+
+.commentsTitleContainer {
+  display: flex;
+  gap: var(--gap-10px);
+  align-self: center;
+  align-items: center;
+}
+
+.commentContainer {
+  display: flex;
+  gap: var(--gap-10px);
+}
+
+.addCommentForm {
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap-10px);
+  align-items: center;
+  padding-bottom: 30px;
+}
+
+.addCommentForm input {
+  padding: 5px;
+  width: 100%;
 }
 
 /* ----- MOBILE ----- */
 
-@media (max-width: 420px) {
+@media (max-width: 514px) {
   .cards {
     justify-content: center;
+  }
+}
+
+@media (max-width: 450px) {
+  .card-popUp {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .card-info-popUp {
+    width: 80vw;
   }
 }
