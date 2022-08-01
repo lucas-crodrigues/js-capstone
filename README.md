@@ -20,7 +20,7 @@ The project was based on [Magic the gathering](https://magic.wizards.com/en) usi
 
 ## Live Demo
 
- [JS Capstone](https://lucas-crodrigues.github.io/js-capstone/dist)
+ [Magic the gathering card's collection](https://lucas-crodrigues.github.io/js-capstone/dist)
 
 ## Preview
 ![capstoneScreenShot1](https://user-images.githubusercontent.com/47539402/181867597-f18c1262-229c-4a74-82dc-32369463dd92.png)
